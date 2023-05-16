@@ -36,6 +36,7 @@ const App = ({ signOut }) => {
     const data = {
       name: form.get("name"),
       description: form.get("description"),
+      state: form.get("state")
     };
     await API.graphql({
       query: createRestaurantMutation,
