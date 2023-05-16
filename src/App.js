@@ -75,6 +75,14 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
+           <TextField
+            name="state"
+            placeholder="Restaurants State"
+            label="Restaurants State"
+            labelHidden
+            variation="quiet"
+            required
+          />
           <Button type="submit" variation="primary">
             Create Restaurant
           </Button>
@@ -93,6 +101,7 @@ const App = ({ signOut }) => {
               {rest.name}
             </Text>
             <Text as="span">{rest.description}</Text>
+            <Text as="span">{rest.state}</Text>
             <Button variation="link" onClick={() => deleteRestaurant(rest)}>
               Delete Restaurant
             </Button>
